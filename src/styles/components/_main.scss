@@ -1,0 +1,14 @@
+@use "../utilities/vars" as *;
+
+a {
+    text-decoration: none;
+    color: $white-color;
+}
+
+main {
+    font-family: $font;
+    background-color: #222222;
+    h1 {
+        color: red;
+    }
+}
