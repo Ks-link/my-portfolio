@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Home from '../components/Home'
+import Works from '../components/Works'
+import About from '../components/About'
 
 function AppRouter() {
     return (
