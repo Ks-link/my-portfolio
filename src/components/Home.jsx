@@ -10,6 +10,7 @@ function Home() {
     <>
       <h1>Kaleb Link</h1>
       <h2>Front End Web Developer</h2>
+      
     </>
   )
 }
