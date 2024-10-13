@@ -1,8 +1,12 @@
 import React from 'react'
+import Nav from './Nav'
 
 function About() {
   return (
-    <div>About</div>
+    <article>
+      <h1>About Me</h1>
+      <Nav />
+    </article>
   )
 }
 
