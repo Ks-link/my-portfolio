@@ -3,13 +3,16 @@ import Nav from './Nav'
 import Loading from '../utilities/Loading';
 import { restBase } from '../utilities/Utilities';
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-function WorkDetail({ workData }) {
+function WorkDetail() {
     const restPathPage = restBase + 'pages/11'
     const restPathPosts = restBase + 'portfolio-work?_embed=true'
     const [restDataPage, setDataPage] = useState([])
     const [restDataPosts, setDataPosts] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
+    const location = useLocation()
+    const { from } = location.state
 
     useEffect(() => {
         const fetchData = async () => {
@@ -32,14 +35,15 @@ function WorkDetail({ workData }) {
         <>
             {isLoaded ?
                 <section id={`post-${restDataPage.id}`}>
-                    <h1>{restDataPage.title.rendered}</h1>
+                    <p>{from.acf.summary}</p>
+                    {/* <h1>{restDataPage.title.rendered}</h1>
                     <Nav />
                     {restDataPosts.map(post =>
                         <article key={post.id} id={`post-${post.id}`}>
                             <h2>{post.title.rendered}</h2>
                             <p>{post.acf.summary}</p>
                         </article>
-                    )}
+                    )} */}
                 </section>
                 :
                 <Loading />

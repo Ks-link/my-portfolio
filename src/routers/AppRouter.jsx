@@ -13,7 +13,7 @@ function AppRouter() {
                     <Route path='/' element={<Home />} />
                     <Route path='/works' element={<Works />} />
                     <Route path='/about' element={<About />} />
-                    <Route path='/details' element={<WorkDetail workData={ "test" } />} />
+                    <Route path='/details' element={<WorkDetail />} />
                 </Routes>
             </main>
         </BrowserRouter>

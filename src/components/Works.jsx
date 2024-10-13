@@ -37,7 +37,7 @@ function Works() {
           <Nav />
           {restDataPosts.map(post =>
             <article key={post.id} id={`post-${post.id}`}>
-              <NavLink to='/details' end><h2>{post.title.rendered}</h2></NavLink>
+              <NavLink to='/details' state={{ from: post }} end><h2>{post.title.rendered}</h2></NavLink>
             </article>
           )}
         </section>
