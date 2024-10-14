@@ -29,12 +29,12 @@ function WorkDetail() {
                     {/* display features section */}
                     <section className='work-detail-features'>
                         <h2>Features</h2>
-                        {from.acf.feature_1 ? <p>{from.acf.feature_1}</p> : null}
-                        {from.acf.feature_image_1 ? <img src={from.acf.feature_image_1.url} alt={from.acf.feature_image_1.alt} /> : null}
-                        {from.acf.feature_2 ? <p>{from.acf.feature_2}</p> : null}
-                        {from.acf.feature_image_2 ? <img src={from.acf.feature_image_2.url} alt={from.acf.feature_image_2.alt} /> : null}
-                        {from.acf.feature_3 ? <p>{from.acf.feature_3}</p> : null}
-                        {from.acf.feature_image_3 ? <img src={from.acf.feature_image_3.url} alt={from.acf.feature_image_3.alt} /> : null}
+                        {from.acf.feature_1 && <p>{from.acf.feature_1}</p>}
+                        {from.acf.feature_image_1 && <img src={from.acf.feature_image_1.url} alt={from.acf.feature_image_1.alt} />}
+                        {from.acf.feature_2 && <p>{from.acf.feature_2}</p>}
+                        {from.acf.feature_image_2 && <img src={from.acf.feature_image_2.url} alt={from.acf.feature_image_2.alt} />}
+                        {from.acf.feature_3 && <p>{from.acf.feature_3}</p>}
+                        {from.acf.feature_image_3 && <img src={from.acf.feature_image_3.url} alt={from.acf.feature_image_3.alt} />}
                     </section>
                 </section>
 

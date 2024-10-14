@@ -4,10 +4,11 @@ import Loading from '../utilities/Loading';
 import { restBase } from '../utilities/Utilities';
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import FeaturedImage from '../utilities/FeaturedImage';
 
 function Works() {
     const restPathPage = restBase + 'pages/11'
-    const restPathPosts = restBase + 'portfolio-work?acf_format=standard'
+    const restPathPosts = restBase + 'portfolio-work?acf_format=standard&_embed=true'
     const [restDataPage, setDataPage] = useState([])
     const [restDataPosts, setDataPosts] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
@@ -37,7 +38,12 @@ function Works() {
           <Nav />
           {restDataPosts.map(post =>
             <article key={post.id} id={`post-${post.id}`}>
-              <NavLink to='/details' state={{ from: post }} end><h2>{post.title.rendered}</h2></NavLink>
+              <NavLink to='/details' state={{ from: post }} end>
+                <h2>{post.title.rendered}</h2>
+              </NavLink>
+              {post.featured_media !== 0 && post._embedded &&
+                <FeaturedImage featuredImageObject={post._embedded['wp:featuredmedia'][0]} />
+              }
             </article>
           )}
         </section>
