@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 function Works() {
     const restPathPage = restBase + 'pages/11'
-    const restPathPosts = restBase + 'portfolio-work?_embed=true'
+    const restPathPosts = restBase + 'portfolio-work?acf_format=standard'
     const [restDataPage, setDataPage] = useState([])
     const [restDataPosts, setDataPosts] = useState([])
     const [isLoaded, setLoadStatus] = useState(false)
