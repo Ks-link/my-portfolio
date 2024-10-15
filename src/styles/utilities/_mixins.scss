@@ -1,17 +1,32 @@
 @use "../utilities/vars" as *;
 
 // Mixins
-
-
-// Margin center...
+@mixin tile-large( $tile-height-pref, $tile-width-pref ) {
+  background-color: $tile-color-dark;
+  position: absolute;
+  height: $tile-height-pref;
+  width: $tile-width-pref;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  border-radius: $tile-border;
+}
 
 
 // flex
+@mixin center-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}  
 
 
 //   fonts
 @mixin body-font {
-    font-family: "Roboto", sans-serif;
-    color: white;
-  }
+  font-family: "Roboto", sans-serif;
+  color: $font-color-dark;
+}
 

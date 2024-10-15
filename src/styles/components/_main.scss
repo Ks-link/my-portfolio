@@ -2,6 +2,10 @@
 
 main {
     font-family: $font;
+    background-color: $bg-color-dark;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
     h1 {
         color: #000;
     }

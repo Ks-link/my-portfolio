@@ -1,4 +1,7 @@
 // color
+$tile-color-dark: #3A3838;
+$bg-color-dark: #2E2D2D;
+$font-color-dark: #F6E8EA;
 
 // screen sizes
 $tablet: 40rem;  
@@ -12,3 +15,8 @@ $desktop-larger: 85rem;
   }
 
 $font: "Roboto Condensed", sans-serif;
+
+// tile
+$tile-border: 1rem;
+$tile-height: 90vh;
+$tile-width: 90vw;

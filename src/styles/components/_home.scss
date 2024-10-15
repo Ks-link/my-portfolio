@@ -1,0 +1,8 @@
+@use "../utilities/vars" as *;
+@use "../utilities/mixins" as *;
+
+.home-wrapper {
+    @include tile-large( fit-content, fit-content );
+    @include center-flex;
+    padding: 3rem 5rem;
+}
