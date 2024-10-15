@@ -3,7 +3,6 @@
 
 .works-wrapper {
     @include tile-large( $tile-height, $tile-width );
-    // @include center-flex;
     
     h1 {
         width: 100%;
@@ -12,14 +11,34 @@
         width: 100%;
     }
     .work-links-wrapper {
-        
-    }
+        max-width: 75%;
+        margin: 2rem auto;
 
-    
-    .work-detail-link {
-        h2 {
-            &:hover {
-                color: $accent-color;
+        article {
+            position: relative;
+            margin: 1rem 0;
+            height: 7rem;
+
+            h2 {
+                font-weight: 700;
+                font-size: 2rem;
+                position: absolute;
+                z-index: 9;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: fit-content;
+                width: fit-content;
+                margin: auto;
+            }
+            figure {
+                filter: brightness(0.5);
+                img {
+                    height: 7rem;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                }
             }
         }
     }
@@ -30,6 +49,17 @@
         .work-links-wrapper {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
+
+            .work-detail-link {
+                &:hover {
+                    h2 {
+                        color: $accent-color;
+                    }
+                    figure {
+                        filter: brightness(1);
+                    }
+                }
+            }
         }
     }
 }

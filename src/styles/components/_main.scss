@@ -3,6 +3,7 @@
 @use "../utilities/typography" as *;
 
 main {
+    @include main-bg-noise;
     font-family: $body-font;
     background-color: $bg-color-dark;
     position: relative;
