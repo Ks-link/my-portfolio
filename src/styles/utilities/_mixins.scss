@@ -26,7 +26,7 @@
 
 //   fonts
 @mixin body-font {
-  font-family: "Roboto", sans-serif;
+  font-family: $body-font;
   color: $font-color-dark;
 }
 

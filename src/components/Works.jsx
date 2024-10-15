@@ -35,7 +35,7 @@ function Works() {
       {isLoaded ?
         <section id={`post-${restDataPage.id}`}>
           <h1>{restDataPage.title.rendered}</h1>
-          <Nav />
+          <Nav currentPage="works" />
           {restDataPosts.map(post =>
             <article key={post.id} id={`post-${post.id}`}>
               <NavLink to='/details' state={{ from: post }} end>

@@ -1,12 +1,11 @@
 @use "../utilities/vars" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/typography" as *;
 
 main {
-    font-family: $font;
+    font-family: $body-font;
     background-color: $bg-color-dark;
     position: relative;
     height: 100vh;
     width: 100vw;
-    h1 {
-        color: #000;
-    }
 }

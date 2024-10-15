@@ -7,7 +7,7 @@ function Home() {
     <article className='home-wrapper'>
       <h1>Kaleb Link</h1>
       <h2>Front End Web Developer</h2>
-      <Nav />
+      <Nav currentPage="home" />
     </article>
   )
 }

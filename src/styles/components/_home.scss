@@ -4,5 +4,11 @@
 .home-wrapper {
     @include tile-large( fit-content, fit-content );
     @include center-flex;
-    padding: 3rem 5rem;
+    padding: 1rem 3rem;
+    margin: auto 2rem;
+    
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
 }

@@ -28,7 +28,7 @@ function About() {
       {isLoaded ?
         <section id={`post-${restData.id}`}>
           <h1>{restData.title.rendered}</h1>
-          <Nav />
+          <Nav currentPage="about" />
           <div className="entry-content" dangerouslySetInnerHTML={{ __html: restData.content.rendered }}></div>
         </section>
         :
