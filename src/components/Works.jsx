@@ -33,19 +33,21 @@ function Works() {
   return (
     <>
       {isLoaded ?
-        <section id={`post-${restDataPage.id}`}>
+        <section className='works-wrapper' id={`post-${restDataPage.id}`}>
           <h1>{restDataPage.title.rendered}</h1>
           <Nav currentPage="works" />
-          {restDataPosts.map(post =>
-            <article key={post.id} id={`post-${post.id}`}>
-              <NavLink to='/details' state={{ from: post }} end>
-                <h2>{post.title.rendered}</h2>
-              </NavLink>
-              {post.featured_media !== 0 && post._embedded &&
-                <FeaturedImage featuredImageObject={post._embedded['wp:featuredmedia'][0]} />
-              }
-            </article>
-          )}
+          <section className='work-links-wrapper'>
+            {restDataPosts.map(post =>
+              <article key={post.id} id={`post-${post.id}`}>
+                <NavLink className='work-detail-link' to='/details' state={{ from: post }} end>
+                  <h2>{post.title.rendered}</h2>
+                </NavLink>
+                {post.featured_media !== 0 && post._embedded &&
+                  <FeaturedImage featuredImageObject={post._embedded['wp:featuredmedia'][0]} />
+                }
+              </article>
+            )}
+          </section> {/* end works wrapper */}
         </section>
         :
         <Loading />

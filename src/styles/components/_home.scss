@@ -4,11 +4,25 @@
 .home-wrapper {
     @include tile-large( fit-content, fit-content );
     @include center-flex;
-    padding: 1rem 3rem;
+    padding: 10rem 3rem;
     margin: auto 2rem;
     
     h1 {
         width: 100%;
         text-align: center;
+    }
+
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: $tablet) {
+    .home-wrapper {
+        @include tile-large( $tile-height, $tile-width );
+    }
+    h1 {
+        // text-align: center;
     }
 }

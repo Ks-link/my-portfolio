@@ -8,12 +8,15 @@ h1 {
   font-family: $heading-font;
   color: $font-color-dark;
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 h2 {
   font-family: $sub-heading-font;
   color: $font-color-dark;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.2;
 }
 
 p {
