@@ -24,9 +24,9 @@ function WorkDetail() {
                     {workDetailToDisplay === "Summary" && 
                         <section className='work-detail-summary'>
                             <h2>Summary</h2>
-                            <p>{from.acf.summary}</p>
                             {/* display work summary image if there is one */}
                             {from.acf.summary_image.url ? <img className='detail-work-summary-image' src={from.acf.summary_image.url} alt={from.acf.summary_image.alt} /> : null}
+                            <p>{from.acf.summary}</p>
                         </section>
                     }
 

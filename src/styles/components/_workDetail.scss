@@ -3,5 +3,20 @@
 
 .work-detail-wrapper {
     @include tile-large( $tile-height, $tile-width );
-    
+    overflow: hidden;
+    h2 {
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    .detail-work-summary-image {
+        position: absolute;
+        right: -0.5rem;
+        max-width: 60%;
+        object-fit: cover;
+        border-radius: 2rem 0 0 2rem;
+    }
+    p {
+        padding: 1rem;
+        margin-top: 10rem;
+    }
 }
