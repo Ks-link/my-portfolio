@@ -1,0 +1,7 @@
+@use "../utilities/vars" as *;
+@use "../utilities/mixins" as *;
+
+.work-detail-wrapper {
+    @include tile-large( $tile-height, $tile-width );
+    
+}
