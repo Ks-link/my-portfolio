@@ -9,12 +9,11 @@ function Home() {
 
   return (
     <article className='home-wrapper'>
-      <svg className='blobTile' width="1000" height="1000" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className='blob-tile-home' width="700" height="700" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
         <motion.path 
           fillRule="evenodd" 
           clipRule="evenodd" 
           d={blobTilePath1} 
-          fill="#7F9C96"
           animate={{ d: blobTilePath1 }}
           transition={{
             duration: 2, 
@@ -23,10 +22,10 @@ function Home() {
             ease: "easeInOut",
           }}/>
       </svg>
-      <div className='page-content'>
+      <div className='page-content-home'>
         <h1>Kaleb Link</h1>
         <h2>Front End Web Developer</h2>
-        <Nav currentPage="home" />
+        <nav className='nav-home'><Nav currentPage="home" /></nav>
       </div>
     </article>
   )

@@ -16,6 +16,13 @@
   // overflow: scroll;
 }
 
+@mixin blob-tile( $tile-height-pref, $tile-width-pref ) {
+  position: absolute;
+  height: $tile-height-pref;
+  width: $tile-width-pref;
+  z-index: 0;
+}
+
 @mixin main-bg-noise {
   background-image: url("/src/assets/noisy-bg.png");
   background-repeat: repeat;

@@ -2,42 +2,58 @@
 @use "../utilities/mixins" as *;
 
 .works-wrapper {
-    @include tile-large( $tile-height, $tile-width );
-    
-    h1 {
-        width: 100%;
+    .blob-tile-works {
+        @include blob-tile( $tile-height, $tile-width );
+        left: -10rem;
+        top: -15rem;
+        width: 65rem;
+        height: 40rem;
+        fill: $blob-tile-color;
     }
-    nav {
-        width: 100%;
-    }
-    .work-links-wrapper {
-        max-width: 75%;
-        margin: 2rem auto;
+    .page-content-works {
+        position: absolute;
+        z-index: 1;
+        h1 {
+            width: 100%;
+            padding: 2rem 0 0 11rem;
 
-        article {
-            position: relative;
-            margin: 1rem 0;
-            height: 7rem;
+        }
+        .work-links-wrapper {
+            width: clamp(10rem, 80%, 50rem);
+            margin: 4rem auto;
 
-            h2 {
-                font-weight: 700;
-                font-size: 2rem;
-                position: absolute;
-                z-index: 9;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                height: fit-content;
-                width: fit-content;
-                margin: auto;
-            }
-            figure {
-                filter: brightness(0.5);
-                img {
-                    height: 7rem;
-                    object-fit: cover;
-                    border-radius: 1rem;
+            article {
+                position: relative;
+                margin: 1rem 0;
+                a {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+
+                    .link-arrow {
+                        fill: $font-color-dark;
+                        padding-left: 0.4rem;
+                    }
+                }
+                
+                &:nth-child(odd) {
+                    a {
+                        flex-direction: row-reverse;
+                    }
+                }
+                h2 {
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                    text-align: center;
+                }
+                figure {
+                    img {
+                        width: clamp(10rem, 60vw, 20rem);
+                        height: 16vh;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                    }
                 }
             }
         }
@@ -53,10 +69,10 @@
             .work-detail-link {
                 &:hover {
                     h2 {
-                        color: $accent-color;
-                    }
-                    figure {
-                        filter: brightness(1);
+                        color: $blob-tile-color;
+                        svg {
+                            fill: $blob-tile-color;
+                        }
                     }
                 }
             }
