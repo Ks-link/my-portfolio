@@ -2,7 +2,7 @@
 
 // Mixins
 @mixin tile-large( $tile-height-pref, $tile-width-pref ) {
-  background-color: $tile-color-dark;
+  // background-color: $tile-color-dark;
   position: absolute;
   height: $tile-height-pref;
   width: $tile-width-pref;
@@ -11,7 +11,7 @@
   right: 0;
   left: 0;
   margin: auto;
-  border-radius: $tile-border;
+  // border-radius: $tile-border; 
   // box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.3);
   // overflow: scroll;
 }

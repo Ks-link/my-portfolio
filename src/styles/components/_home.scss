@@ -2,27 +2,38 @@
 @use "../utilities/mixins" as *;
 
 .home-wrapper {
-    @include tile-large( fit-content, fit-content );
-    @include center-flex;
-    padding: 10rem 3rem;
-    margin: auto 2rem;
+    position: relative;
+    .blobTile {
+        // @include tile-large( fit-content, fit-content );
+        z-index: 0;
+        position: absolute;
+        // left: -40rem;
+        // top: 5rem;
+        // width: 50rem;
+        // object-fit: fill;
+    }
+    // @include center-flex;
+
+    .page-content {
+        position: absolute;
+        z-index: 1;
+        padding: 10rem 3rem;
+        margin: auto 2rem;
+        h1 {
+            width: 100%;
+            text-align: center;
+        }
     
-    h1 {
-        width: 100%;
-        text-align: center;
-    }
-
-    h2 {
-        width: 100%;
-        text-align: center;
+        h2 {
+            width: 100%;
+            text-align: center;
+        }
     }
 }
 
-@media (min-width: $tablet) {
-    .home-wrapper {
-        @include tile-large( $tile-height, $tile-width );
-    }
-    h1 {
-        // text-align: center;
-    }
-}
+// @media (min-width: $tablet) {
+//     .home-wrapper {
+//         @include tile-large( $tile-height, $tile-width );
+//     }
+//     
+// }
