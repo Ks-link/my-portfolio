@@ -2,24 +2,35 @@
 @use "../utilities/mixins" as *;
 
 .work-detail-wrapper {
-    @include tile-large( $tile-height, $tile-width );
-    overflow: hidden;
-    h2 {
-        padding: 1rem;
-        margin-top: 2rem;
+    .blob-tile-work-detail {
+        @include blob-tile( $tile-height, $tile-width );
+        left: -20rem;
+        top: 3rem;
+        width: 70rem;
+        height: 50rem;
     }
-    .detail-work-summary-image {
+
+    .page-content-work-detail {
         position: absolute;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        margin: auto;
-        width: 90%;
-        max-width: 30rem;
-        object-fit: cover;
-        border-radius: 1rem 1rem 0 0;
-    }
-    p {
-        padding: 1rem;
+        z-index: 1;
+        
+        .detail-work-title {
+            margin: 0.6rem 0 1rem 10rem;
+        }
+
+        .detail-work-summary-image {
+            // position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            width: 90%;
+            max-width: 30rem;
+            object-fit: cover;
+            border-radius: 1rem 1rem 0 0;
+        }
+        p {
+            padding: 1rem;
+        }
     }
 }

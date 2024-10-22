@@ -21,6 +21,7 @@
   height: $tile-height-pref;
   width: $tile-width-pref;
   z-index: 0;
+  fill: $blob-tile-color;
 }
 
 @mixin main-bg-noise {

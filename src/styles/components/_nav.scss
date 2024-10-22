@@ -52,3 +52,28 @@
         }
     }
 }
+
+.nav-work-detail {
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        padding: 7rem 0 0 12rem;
+        margin: 0;
+        width: 27rem;
+        li {
+            a {
+                text-decoration: none;
+                color: $font-color-dark;
+                font-size: 1rem;
+                &:hover {
+                    color: $bg-color-dark;
+                    svg {
+                        fill: $bg-color-dark;
+                    }
+                }
+            }
+        }
+    }
+}
