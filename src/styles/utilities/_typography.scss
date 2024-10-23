@@ -2,7 +2,7 @@
 @use "../utilities/mixins" as *;
 
 // google fonts Merriweather Sans, cantarell, catamaran
-@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Catamaran:wght@100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Catamaran:wght@100..900&family=Knewave&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 h1 {
   font-family: $heading-font;
@@ -13,7 +13,7 @@ h1 {
 
 h2, h3 {
   font-family: $sub-heading-font;
-  color: $font-color-dark;
+  color: $darkgrey;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.2;
@@ -22,5 +22,6 @@ h2, h3 {
 p {
   font-family: $body-font;
   color: $font-color-dark;
+  font-size: 0.8rem;
 }
 

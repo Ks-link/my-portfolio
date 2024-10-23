@@ -1,12 +1,15 @@
 // color
 $tile-color-dark: #3A3838;
 $bg-color-dark: #403D39;
-$font-color-dark: #FFFCF2;
+$darkgrey: #252422;
+// $font-color-dark: #FFFCF2;
+$font-color-dark: #252422;
 
-$tile-color-light: #F6E8EA;
+$tile-color-light: #FFFCF2;
 $font-color-light: #3A3838;
 
-$blob-tile-color: #EB5E28;
+// $blob-tile-color: #EB5E28;
+$blob-tile-color: #CCC5B9;
 
 $accent-color: #F9A03F;
 
@@ -18,7 +21,8 @@ $desktop-larger: 85rem;
 // fonts
 $body-font: "Merriweather Sans", sans-serif;
 $sub-heading-font: "Cantarell", serif;
-$heading-font: "Catamaran", sans-serif;
+// $heading-font: "Catamaran", sans-serif;
+$heading-font: "Knewave", cursive;
 
 // tile
 $tile-border: 1rem;

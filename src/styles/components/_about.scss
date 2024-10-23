@@ -1,0 +1,32 @@
+@use "../utilities/vars" as *;
+@use "../utilities/mixins" as *;
+
+.about-wrapper {
+    .blob-tile-about {
+        @include blob-tile( $tile-height, $tile-width );
+        // left: -20rem;
+        // top: 5rem;
+        width: 65rem;
+        height: 40rem;
+    }
+    .page-content-about {
+        position: absolute;
+        z-index: 1;
+        // padding: 15rem 2rem;
+        // margin: auto 1rem;
+        h1 {
+            width: 100%;
+        }
+    
+        h2 {
+            width: 100%;
+        }
+    }
+}
+
+// @media (min-width: $tablet) {
+//     .home-wrapper {
+//         @include tile-large( $tile-height, $tile-width );
+//     }
+//     
+// }

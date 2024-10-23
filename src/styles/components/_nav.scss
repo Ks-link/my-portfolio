@@ -12,9 +12,9 @@
         justify-content: space-around;
         align-items: center;
         list-style: none;
-        padding: 10rem 0 0 10rem;
+        padding: 10rem 0 0 6rem;
         margin: 0;
-        width: 22rem;
+        width: 16rem;
         li {
             a {
                 text-decoration: none;
@@ -34,9 +34,9 @@
         justify-content: space-around;
         align-items: center;
         list-style: none;
-        padding: 0.5rem 0 0 6rem;
+        padding: 0.8rem 0 0 10rem;
         margin: 0;
-        width: 16rem;
+        width: 20rem;
         li {
             a {
                 text-decoration: none;
@@ -56,17 +56,46 @@
 .nav-work-detail {
     ul {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: flex-end;
+        gap: 0 1rem;
+        flex-wrap: wrap;
         list-style: none;
-        padding: 7rem 0 0 12rem;
-        margin: 0;
-        width: 27rem;
+        padding: 5rem 0 0 0;
+        margin: 0 1rem 0 7rem;
+        width: 60%;
         li {
             a {
                 text-decoration: none;
                 color: $font-color-dark;
                 font-size: 1rem;
+                font-weight: 1000;
+                &:hover {
+                    color: $bg-color-dark;
+                    svg {
+                        fill: $bg-color-dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-about {
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0 1rem;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 5rem 0 0 0;
+        margin: 0 1rem 0 7rem;
+        width: 60%;
+        li {
+            a {
+                text-decoration: none;
+                color: $font-color-dark;
+                font-size: 1rem;
+                font-weight: 1000;
                 &:hover {
                     color: $bg-color-dark;
                     svg {
