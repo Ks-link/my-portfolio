@@ -4,27 +4,23 @@
 .about-wrapper {
     .blob-tile-about {
         @include blob-tile( $tile-height, $tile-width );
-        // left: -20rem;
-        // top: 5rem;
-        width: 65rem;
+        bottom: -23rem;
+        width: 40rem;
         height: 40rem;
     }
     .page-content-about {
         position: absolute;
         z-index: 1;
-        // padding: 15rem 2rem;
-        // margin: auto 1rem;
         h1 {
-            width: 100%;
             color: $tile-color-light;
+            margin: 2rem 3rem 1rem;
         }
-        h2 {
-            width: 100%;
-            color: $tile-color-light;
-        }
-        p {
-            font-size: 1rem;
-            color: $tile-color-light;
+        .entry-content {
+            margin: 2rem;
+            p {
+                font-size: 1rem;
+                color: $tile-color-light;
+            }
         }
     }
 }
