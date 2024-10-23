@@ -21,7 +21,7 @@
                 color: $font-color-dark;
                 font-size: 1rem;
                 &:hover {
-                    color: $accent-color;
+                    color: $bg-color-dark;
                 }
             }
         }
@@ -93,14 +93,17 @@
         li {
             a {
                 text-decoration: none;
-                color: $font-color-dark;
+                color: $tile-color-light;
                 font-size: 1rem;
                 font-weight: 1000;
                 &:hover {
                     color: $bg-color-dark;
-                    svg {
+                    .arrow {
                         fill: $bg-color-dark;
                     }
+                }
+                .arrow {
+                    fill: $tile-color-light;
                 }
             }
         }

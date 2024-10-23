@@ -16,10 +16,15 @@
         // margin: auto 1rem;
         h1 {
             width: 100%;
+            color: $tile-color-light;
         }
-    
         h2 {
             width: 100%;
+            color: $tile-color-light;
+        }
+        p {
+            font-size: 1rem;
+            color: $tile-color-light;
         }
     }
 }
