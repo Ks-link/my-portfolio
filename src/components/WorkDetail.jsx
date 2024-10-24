@@ -29,9 +29,9 @@ function WorkDetail() {
 
                         {/* display work summary on button click */}
                         <nav className='detail-nav'>
-                            <button onClick={() => setWorkDetailToDisplay("Summary")}>Summary</button>
-                            <button onClick={() => setWorkDetailToDisplay("Results")}>Results</button>
-                            <button onClick={() => setWorkDetailToDisplay("Features")}>Features</button>
+                            <button className='feature-button' onClick={() => setWorkDetailToDisplay("Summary")}>Summary</button>
+                            <button className='feature-button' onClick={() => setWorkDetailToDisplay("Results")}>Results</button>
+                            <button className='feature-button' onClick={() => setWorkDetailToDisplay("Features")}>Features</button>
                         </nav>
 
                         {workDetailToDisplay === "Summary" &&

@@ -1,11 +1,12 @@
 import React from 'react'
 import Nav from './Nav'
 import Loading from '../utilities/Loading';
+import FeaturedImage from '../utilities/FeaturedImage';
 import { restBase } from '../utilities/Utilities';
 import { useState, useEffect } from 'react';
 
 function About() {
-  const restPath = restBase + 'pages/14'
+  const restPath = restBase + 'pages/14?_embed=true'
   const [restData, setData] = useState([])
   const [isLoaded, setLoadStatus] = useState(false)
 
@@ -38,6 +39,7 @@ function About() {
               <h1>{restData.title.rendered}</h1>
               <nav className='nav-about'><Nav currentPage="about" /></nav>
               <div className="entry-content" dangerouslySetInnerHTML={{ __html: restData.content.rendered }}></div>
+              <FeaturedImage className='about-image' featuredImageObject={restData._embedded['wp:featuredmedia'][0]} />
           </div>
         </section>
         :
