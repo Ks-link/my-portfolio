@@ -108,6 +108,26 @@
                 padding: 0.5rem 2rem;
             }
         }
+
+        .work-detail-results {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-top: 2rem;
+                li {
+                    text-align: center;
+                    background-color: $darkgrey;
+                    padding: 0 0.2rem;
+                    border-radius: 0.5rem;
+                    p {
+                        color: $tile-color-light;
+                    }
+                }
+            }
+        }
+
     }
 }
 
@@ -131,6 +151,8 @@
             left: -7rem;
         }
 
+        
+
         .page-content-work-detail {
             width: 26rem;
             left: 15rem;
@@ -140,6 +162,9 @@
                     border-radius: 1rem;
                     padding: 0.5rem 1rem;
                 }
+            }
+            .detail-work-title {
+                margin-left: 4rem;
             }
         }
     }

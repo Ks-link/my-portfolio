@@ -23,7 +23,7 @@ function WorkDetail() {
                         </svg>
                     </div>
                     <div className='page-content-work-detail'>
-                        <nav className='nav-work-detail'><Nav /></nav>
+                        <nav className='nav-work-detail'><Nav currentPage="details"/></nav>
                         <h1 className='detail-work-title'>{from.title.rendered}</h1>
                         <button className='work-external-link'><a target='_blank' href={`https://kaleblink.com/${from.slug}`}>Check It Out</a></button>
 
@@ -48,6 +48,16 @@ function WorkDetail() {
                             <section className='work-detail-results'>
                                 <h2>What I Learned</h2>
                                 <p>{from.acf.results}</p>
+                                <div>
+                                    {/* Map over json and grab each taxonomy name */}
+                                    <ul>
+                                    {from._embedded['wp:term'][0].map(term =>
+                                        <li key={term.id}>
+                                            <p>{term.name}</p>
+                                        </li>
+                                    )}
+                                    </ul>
+                                </div>
                             </section>
                         }
 

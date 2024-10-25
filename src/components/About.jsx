@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from './Nav'
 import Loading from '../utilities/Loading';
-// import FeaturedImage from '../utilities/FeaturedImage';
+import FeaturedImage from '../utilities/FeaturedImage';
 import { restBase } from '../utilities/Utilities';
 import { useState, useEffect } from 'react';
 
@@ -28,7 +28,7 @@ function About() {
     <>
       {isLoaded ?
         <section className='about-wrapper' id={`post-${restData.id}`}>
-          <svg className='blob-tile-about' width="608" height="676" viewBox="0 0 608 676" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className='blob-tile-about' width="608" height="676" viewBox="-80 -380 608 676" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path 
               fillRule="evenodd" 
               clipRule="evenodd" 
@@ -39,7 +39,7 @@ function About() {
               <h1>{restData.title.rendered}</h1>
               <nav className='nav-about'><Nav currentPage="about" /></nav>
               <div className="entry-content" dangerouslySetInnerHTML={{ __html: restData.content.rendered }}></div>
-              {/* <FeaturedImage className='about-image' featuredImageObject={restData._embedded['wp:featuredmedia'][0]} /> */}
+              <FeaturedImage className='about-image' featuredImageObject={restData._embedded['wp:featuredmedia'][0]} />
           </div>
         </section>
         :

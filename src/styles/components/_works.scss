@@ -69,10 +69,14 @@
     .works-wrapper {
         .page-content-works {
             width: 100%;
-            .work-links-wrapper article {
-                figure {
-                    img {
-                        height: 14rem;
+            .work-links-wrapper {
+                width: 75%;
+                max-width: 65rem;
+                article {
+                    figure {
+                        img {
+                            height: 14rem;
+                        }
                     }
                 }
             }
