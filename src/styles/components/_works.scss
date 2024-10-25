@@ -1,0 +1,95 @@
+@use "../utilities/vars" as *;
+@use "../utilities/mixins" as *;
+
+.works-wrapper {
+    .blob-tile-works {
+        @include blob-tile( $tile-height, $tile-width );
+        left: -10rem;
+        top: -15rem;
+        width: 65rem;
+        height: 40rem;
+    }
+    .page-content-works {
+        position: absolute;
+        z-index: 1;
+        h1 {
+            width: 100%;
+            padding: 2rem 0 0 11rem;
+
+        }
+        .work-links-wrapper {
+            max-width: 80%;
+            margin: 6rem auto;
+
+            article {
+                position: relative;
+                margin: 2rem 0;
+                .work-detail-link {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: end;
+                    gap: 1rem;
+                    
+                    h2 {
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        text-align: center;
+                        padding: 1rem;
+                        color: $tile-color-light;
+                        width: 9rem;
+                        
+                        .link-arrow {
+                            fill: $tile-color-light;
+                            padding: 0.6rem 0 0 0.6rem;
+                        }
+                    }
+                }
+                figure {
+                    img {
+                        height: 8rem;
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                    }
+                }
+                &:nth-child(odd) {
+                    a {
+                        flex-direction: row-reverse;
+                        h2 {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $tablet) {
+    .works-wrapper {
+        .page-content-works {
+            width: 100%;
+            .work-links-wrapper {
+                width: 75%;
+                max-width: 65rem;
+                article {
+                    figure {
+                        img {
+                            height: 14rem;
+                        }
+                    }
+                }
+            }
+            .work-detail-link {
+                &:hover {
+                    h2 {
+                        color: $blob-tile-color;
+                        svg {
+                            fill: $blob-tile-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

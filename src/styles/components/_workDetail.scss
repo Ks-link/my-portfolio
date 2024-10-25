@@ -1,0 +1,171 @@
+@use "../utilities/vars" as *;
+@use "../utilities/mixins" as *;
+
+.work-detail-wrapper {
+    
+    .blob-tile-work-detail {
+        @include blob-tile( $tile-height, $tile-width );
+        left: -24rem;
+        top: 3rem;
+        width: 70rem;
+        height: 50rem;
+    }
+
+    .page-content-work-detail {
+        width: 100vw;
+        position: absolute;
+        z-index: 1;
+        .detail-work-title {
+            margin: 1rem auto;
+            padding-bottom: 1rem;
+            text-align: right;
+            width: 80%;
+        }
+
+        .work-external-link {
+            position: absolute;
+            top: 17.5rem;
+            right: 0;
+            width: fit-content;
+            border-radius: 1rem 0 0 1rem;
+            margin-bottom: 0.2rem;
+            padding: 0.5rem 1rem;
+            background-color: $darkgrey;
+            cursor: pointer;
+            &:hover {
+                background-color: $bg-color-dark;
+            }
+            a {
+                color: $tile-color-light;
+            }
+            a:visited {
+                color: $tile-color-light;
+            }
+        }
+
+        .detail-nav {
+            position: absolute;
+            top: 13rem;
+            width: 8rem;
+            .feature-button {
+                margin-bottom: 0.2rem;
+                padding: 0.5rem 0.8rem 0.5rem 0.5rem;
+                border-radius: 0 1rem 1rem 0;
+                background-color: $darkgrey;
+                color: $tile-color-light;
+                cursor: pointer;
+                &:hover {
+                    background-color: $bg-color-dark;
+                }
+            }
+        }
+
+        .work-detail-summary, 
+        .work-detail-results,
+        .work-detail-features {
+            position: absolute;
+            top: 20rem;
+            h2 {
+                font-weight: 700;
+                font-size: 1.5rem;
+                padding: 1rem;
+                text-align: center;
+            }
+            
+            .detail-work-summary-image,
+            .detail-work-feature-image {
+                display: flex;
+                justify-content: center;
+                width: 85%;
+                max-width: 22rem;
+                max-height: 14rem;
+                margin: 0 auto;
+                object-fit: cover;
+                border: $bg-color-dark 0.4rem solid;
+                border-radius: 1rem;
+            }
+            .features-title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 1rem;
+                h2 {
+                    padding: 0;
+                    margin: 1rem;
+                }
+                nav {
+                    width: fit-content;
+                    button {
+                        padding: 0.5rem 0.8rem;
+                        margin: 0 0.2rem;
+                        .feature-arrow {
+                            fill: $tile-color-light;
+                        }
+                    }
+                }
+            }
+            p {
+                padding: 0.5rem 2rem;
+            }
+        }
+
+        .work-detail-results {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-top: 2rem;
+                li {
+                    text-align: center;
+                    background-color: $darkgrey;
+                    padding: 0 0.2rem;
+                    border-radius: 0.5rem;
+                    p {
+                        color: $tile-color-light;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 23.75rem) {
+    .work-detail-wrapper {
+        .page-content-work-detail {
+            width: 23.75rem;
+
+            .work-external-link {
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+
+@media (min-width: $tablet) {
+    .work-detail-wrapper {
+        .blob-tile-work-detail {
+            right: 0;
+            left: -7rem;
+        }
+
+        
+
+        .page-content-work-detail {
+            width: 26rem;
+            left: 15rem;
+
+            .detail-nav {
+                .feature-button {
+                    border-radius: 1rem;
+                    padding: 0.5rem 1rem;
+                }
+            }
+            .detail-work-title {
+                margin-left: 4rem;
+            }
+        }
+    }
+}

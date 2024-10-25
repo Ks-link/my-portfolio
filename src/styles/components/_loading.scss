@@ -1,0 +1,10 @@
+@use "../utilities/vars" as *;
+@use "../utilities/mixins" as *;
+
+.loading {
+    @include center-flex;
+    @include tile-large( $tile-height, $tile-width );
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+}

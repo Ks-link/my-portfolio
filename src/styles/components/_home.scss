@@ -1,0 +1,51 @@
+@use "../utilities/vars" as *;
+@use "../utilities/mixins" as *;
+
+.home-wrapper {
+    .blob-tile-home {
+        @include blob-tile( $tile-height, $tile-width );
+        left: -20rem;
+        top: 5rem;
+        width: 65rem;
+        height: 40rem;
+    }
+    .page-content-home {
+        position: absolute;
+        z-index: 1;
+        padding: 15rem 2rem;
+        margin: auto 1rem;
+
+        h1 {
+            width: 100%;
+        }
+
+        h2 {
+            width: 100%;
+            margin-top: 0.2rem;
+        }
+    }
+}
+
+.ml16 {
+    overflow: hidden;
+}
+
+.ml16 .letter {
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+
+@media (min-width: $tablet) {
+    .home-wrapper {
+        .blob-tile-home {
+            right: 0;
+            left: 0;
+        }
+
+        .page-content-home {
+            width: fit-content;
+            left: 18rem;
+        }
+    }
+}

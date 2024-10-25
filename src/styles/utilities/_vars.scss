@@ -1,4 +1,17 @@
 // color
+$tile-color-dark: #3A3838;
+$bg-color-dark: #403D39;
+$darkgrey: #252422;
+// $font-color-dark: #FFFCF2;
+$font-color-dark: #252422;
+
+$tile-color-light: #FFFCF2;
+// $font-color-light: #3A3838;
+
+// $blob-tile-color: #EB5E28;
+$blob-tile-color: #CCC5B9;
+
+$accent-color: #F9A03F;
 
 // screen sizes
 $tablet: 40rem;  
@@ -6,9 +19,12 @@ $desktop: 65rem;
 $desktop-larger: 85rem; 
 
 // fonts
-@font-face {
-    font-family: "Roboto", sans-serif;
-    src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-  }
+$body-font: "Merriweather Sans", sans-serif;
+$sub-heading-font: "Cantarell", serif;
+// $heading-font: "Catamaran", sans-serif;
+$heading-font: "Knewave", cursive;
 
-$font: "Roboto Condensed", sans-serif;
+// tile
+$tile-border: 1rem;
+$tile-height: 90vh;
+$tile-width: 90vw;

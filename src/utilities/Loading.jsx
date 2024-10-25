@@ -1,4 +1,4 @@
-import loading from '../assets/loading-01.webp';
+import loading from '../assets/loading-02.webp';
 
 const Loading = () => {
     
