@@ -107,3 +107,12 @@
         }
     }
 }
+
+@media (min-width: $tablet) {
+    .nav-about {
+        ul {
+            justify-content: start;
+            margin-left: 3rem;
+        }
+    }
+}

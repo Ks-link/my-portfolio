@@ -18,41 +18,46 @@
 
         }
         .work-links-wrapper {
-            width: clamp(10rem, 80%, 50rem);
-            margin: 4rem auto;
+            max-width: 80%;
+            margin: 6rem auto;
 
             article {
                 position: relative;
-                margin: 1rem 0;
-                a {
+                margin: 2rem 0;
+                .work-detail-link {
                     display: flex;
-                    justify-content: space-evenly;
-                    align-items: center;
-
-                    .link-arrow {
-                        fill: $tile-color-light;
-                        padding: 0.4rem 0 0 0.4rem;
+                    justify-content: flex-start;
+                    align-items: end;
+                    gap: 1rem;
+                    
+                    h2 {
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        text-align: center;
+                        padding: 1rem;
+                        color: $tile-color-light;
+                        width: 9rem;
+                        
+                        .link-arrow {
+                            fill: $tile-color-light;
+                            padding: 0.6rem 0 0 0.6rem;
+                        }
                     }
-                }
-                
-                &:nth-child(odd) {
-                    a {
-                        flex-direction: row-reverse;
-                    }
-                }
-                h2 {
-                    font-weight: 700;
-                    font-size: 1.5rem;
-                    padding: 1rem;
-                    text-align: center;
-                    color: $tile-color-light;
                 }
                 figure {
                     img {
-                        width: clamp(10rem, 60vw, 20rem);
-                        height: 16vh;
+                        height: 8rem;
+                        width: 100%;
                         object-fit: cover;
                         border-radius: 1rem;
+                    }
+                }
+                &:nth-child(odd) {
+                    a {
+                        flex-direction: row-reverse;
+                        h2 {
+                            text-align: left;
+                        }
                     }
                 }
             }
@@ -62,10 +67,15 @@
 
 @media (min-width: $tablet) {
     .works-wrapper {
-        .work-links-wrapper {
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-
+        .page-content-works {
+            width: 100%;
+            .work-links-wrapper article {
+                figure {
+                    img {
+                        height: 14rem;
+                    }
+                }
+            }
             .work-detail-link {
                 &:hover {
                     h2 {

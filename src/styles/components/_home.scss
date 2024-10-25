@@ -4,7 +4,7 @@
 .home-wrapper {
     .blob-tile-home {
         @include blob-tile( $tile-height, $tile-width );
-        right: -20rem;
+        left: -20rem;
         top: 5rem;
         width: 65rem;
         height: 40rem;
@@ -35,20 +35,17 @@
     font-size: 1.3rem;
 }
 
-@media (min-width: 28rem) {
-    .home-wrapper {
-        .blob-tile-home {
-            // position: static;
-            // width: fit-content;
-        }
-    }
-    
-}
 
 @media (min-width: $tablet) {
     .home-wrapper {
         .blob-tile-home {
-            right: 20%;
+            right: 0;
+            left: 0;
+        }
+
+        .page-content-home {
+            width: fit-content;
+            left: 18rem;
         }
     }
 }

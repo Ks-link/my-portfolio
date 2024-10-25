@@ -2,6 +2,7 @@
 @use "../utilities/mixins" as *;
 
 .about-wrapper {
+    overflow-y: hidden;
     .blob-tile-about {
         @include blob-tile( $tile-height, $tile-width );
         bottom: -23rem;
@@ -17,6 +18,8 @@
         }
         .entry-content {
             margin: 2rem;
+            overflow: scroll;
+            height: 40vh;
             p {
                 font-size: 1rem;
                 color: $tile-color-light;
@@ -33,9 +36,35 @@
     }
 }
 
-// @media (min-width: $tablet) {
-//     .home-wrapper {
-//         @include tile-large( $tile-height, $tile-width );
-//     }
-//     
-// }
+
+@media (min-width: 30rem) {
+    .about-wrapper {
+        .blob-tile-about {
+            right: -12rem;
+        }
+    }
+}
+
+@media (min-width: $tablet) {
+    .about-wrapper {
+        .page-content-about {
+            width: 100%;
+            .entry-content {
+                max-width: 60rem;
+                margin: 6rem auto;
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 80rem) {
+    .about-wrapper {
+        .blob-tile-about {
+            left: 50rem;
+        }
+    }
+}

@@ -2,6 +2,7 @@
 @use "../utilities/mixins" as *;
 
 .work-detail-wrapper {
+    
     .blob-tile-work-detail {
         @include blob-tile( $tile-height, $tile-width );
         left: -24rem;
@@ -11,6 +12,7 @@
     }
 
     .page-content-work-detail {
+        width: 100vw;
         position: absolute;
         z-index: 1;
         .detail-work-title {
@@ -104,6 +106,40 @@
             }
             p {
                 padding: 0.5rem 2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 23.75rem) {
+    .work-detail-wrapper {
+        .page-content-work-detail {
+            width: 23.75rem;
+
+            .work-external-link {
+                border-radius: 1rem;
+            }
+        }
+    }
+}
+
+
+@media (min-width: $tablet) {
+    .work-detail-wrapper {
+        .blob-tile-work-detail {
+            right: 0;
+            left: -7rem;
+        }
+
+        .page-content-work-detail {
+            width: 26rem;
+            left: 15rem;
+
+            .detail-nav {
+                .feature-button {
+                    border-radius: 1rem;
+                    padding: 0.5rem 1rem;
+                }
             }
         }
     }
