@@ -31,6 +31,7 @@ function About() {
 
   return (
     <>
+    <a href="#site-content" class="screen-reader-text">skip to content</a>
       {isLoaded ?
         <section className='about-wrapper' id={`post-${restData.id}`}>
           <svg className='blob-tile-about' width="608" height="676" viewBox="-80 -380 608 676" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +48,7 @@ function About() {
                 }}/>
           </svg>
 
-          <div className='page-content-about'>
+          <div id='site-content' className='page-content-about'>
               <h1>{restData.title.rendered}</h1>
               <nav className='nav-about'><Nav currentPage="about" /></nav>
               <div className="entry-content" dangerouslySetInnerHTML={{ __html: restData.content.rendered }}></div>
