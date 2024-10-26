@@ -20,8 +20,12 @@
                 text-decoration: none;
                 color: $font-color-dark;
                 font-size: 1rem;
+                font-weight: 1000;
                 &:hover {
-                    color: $bg-color-dark;
+                    color: $accent-color-dark;
+                    svg {
+                        fill: $accent-color-dark;
+                    }
                 }
             }
         }
@@ -42,10 +46,11 @@
                 text-decoration: none;
                 color: $font-color-dark;
                 font-size: 1rem;
+                font-weight: 1000;
                 &:hover {
-                    color: $bg-color-dark;
+                    color: $accent-color-dark;
                     svg {
-                        fill: $bg-color-dark;
+                        fill: $accent-color-dark;
                     }
                 }
             }
@@ -70,9 +75,9 @@
                 font-size: 1rem;
                 font-weight: 1000;
                 &:hover {
-                    color: $bg-color-dark;
+                    color: $accent-color-dark;
                     svg {
-                        fill: $bg-color-dark;
+                        fill: $accent-color-dark;
                     }
                 }
             }
@@ -95,9 +100,9 @@
                 font-size: 1rem;
                 font-weight: 1000;
                 &:hover {
-                    color: $bg-color-dark;
+                    color: $accent-color-light;
                     .arrow {
-                        fill: $bg-color-dark;
+                        fill: $accent-color-light;
                     }
                 }
                 .arrow {

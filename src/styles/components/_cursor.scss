@@ -1,0 +1,18 @@
+@use "../utilities/vars" as *;
+@use "../utilities/mixins" as *;
+
+
+@media (min-width: $tablet) {
+    #cursor {
+    position: absolute;
+    z-index: 999;
+    background-color: $bg-color-dark;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: background-color 0.2s ease;
+    mix-blend-mode: difference;
+    }
+}
