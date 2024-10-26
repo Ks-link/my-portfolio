@@ -6,7 +6,6 @@ const Cursor = () => {
     const [cursorY, setCursorY] = useState(0);
     const [deviceType, setDeviceType] = useState('');
     const [isClicking, setIsClicking] = useState(false);
-    const [buttonHovered, setButtonHovered] = useState(false);
 
     // check if it is a touch device
     const isTouchDevice = () => {
@@ -27,13 +26,6 @@ const Cursor = () => {
 
         setCursorX(x);
         setCursorY(y);
-
-        // Set the cursor border's position directly
-        const cursorBorder = document.getElementById('cursor-border');
-        if (cursorBorder) {
-            cursorBorder.style.left = `${x}px`;
-            cursorBorder.style.top = `${y}px`;
-        }
     };
 
     const handleMouseDown = () => {
