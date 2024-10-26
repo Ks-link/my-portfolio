@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import Loading from '../utilities/Loading';
 import FeaturedImage from '../utilities/FeaturedImage';
+import Footer from './Footer';
 import { restBase } from '../utilities/Utilities';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -56,6 +57,7 @@ function About() {
         :
         <Loading />
       }
+      <Footer />
     </>
   )
 }
