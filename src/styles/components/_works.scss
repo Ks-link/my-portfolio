@@ -28,7 +28,21 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: end;
-                    gap: 1rem;
+
+                    &:hover {
+                        h2 {
+                            padding: 0 1rem 1.5rem 1rem;
+                            border-bottom: $accent-color-light 0.4rem solid;
+                            color: $accent-color-light;
+                            svg {
+                                fill: $accent-color-light;
+                            }
+                        }
+                        figure {
+                            padding-bottom: 0.5rem;
+                            border-bottom: $accent-color-light 0.4rem solid;
+                        }
+                    }
                     
                     h2 {
                         font-weight: 700;

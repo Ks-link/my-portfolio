@@ -1,10 +1,11 @@
 import React from 'react'
 import Nav from './Nav'
 import Loading from '../utilities/Loading';
+import FeaturedImage from '../utilities/FeaturedImage';
 import { restBase } from '../utilities/Utilities';
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import FeaturedImage from '../utilities/FeaturedImage';
+import { motion } from 'framer-motion';
 
 function Works() {
   const restPathPage = restBase + 'pages/11'
@@ -12,6 +13,9 @@ function Works() {
   const [restDataPage, setDataPage] = useState([])
   const [restDataPosts, setDataPosts] = useState([])
   const [isLoaded, setLoadStatus] = useState(false)
+
+  const blobTilePath1 = "M313.658 2.34107C400.435 5.70242 489.555 16.4661 553.405 75.3282C619.538 136.295 651.604 225.138 652.894 315.076C654.204 406.375 629.446 502.072 560.385 561.803C494.573 618.725 400.412 615.206 313.658 608.487C235.347 602.421 159.271 580.51 102.402 526.331C44.1083 470.796 13.818 395.176 5.67491 315.076C-3.56516 224.185 -9.51597 121.1 54.5884 56.0063C118.917 -9.31494 222.047 -1.2075 313.658 2.34107Z";
+  const blobTilePath2 = "M313.658 2.34107C400.435 5.70242 489.555 16.4661 553.405 75.3282C619.538 136.295 651.604 225.138 652.894 315.076C654.204 406.375 671.561 484.268 602.5 544C536.688 600.922 427.754 608.219 341 601.5C262.689 595.435 117.869 553.678 61 499.5C2.70612 443.964 13.818 395.176 5.67491 315.076C-3.56516 224.185 -9.51597 121.1 54.5884 56.0063C118.917 -9.31494 222.047 -1.2075 313.658 2.34107Z";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,10 +40,17 @@ function Works() {
         <section className='works-wrapper' id={`post-${restDataPage.id}`}>
           <div className='blob-tile-works'>
             <svg className='blob-tile-works' width="653" height="613" viewBox="0 0 653 613" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
+              <motion.path
                 fillRule="evenodd"
                 clipRule="evenodd"
-                d="M313.658 2.34107C400.435 5.70242 489.555 16.4661 553.405 75.3282C619.538 136.295 651.604 225.138 652.894 315.076C654.204 406.375 629.446 502.072 560.385 561.803C494.573 618.725 400.412 615.206 313.658 608.487C235.347 602.421 159.271 580.51 102.402 526.331C44.1083 470.796 13.818 395.176 5.67491 315.076C-3.56516 224.185 -9.51597 121.1 54.5884 56.0063C118.917 -9.31494 222.047 -1.2075 313.658 2.34107Z" />
+                d={blobTilePath1} 
+                animate={{ d: blobTilePath2 }}
+                transition={{
+                  duration: 8, 
+                  repeat: Infinity, 
+                  repeatType: "mirror", 
+                  ease: "easeInOut",
+                }}/>
             </svg>
           </div>
           <div className='page-content-works'>
