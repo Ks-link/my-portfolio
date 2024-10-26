@@ -45,6 +45,37 @@
             object-position: 50% 20%; 
         }
         
+        .email-text {
+            font-size: 1rem;
+            color: $tile-color-light;
+            z-index: 0;
+            padding-left: 2rem;
+        }
+
+        .email-link {
+            padding: 0.4rem 1rem;
+            margin-left: 2rem;
+            background-color: $blob-tile-color;
+            color: $bg-color-dark;
+            svg {
+                fill: $bg-color-dark;
+                width: 1rem;
+                height: 1rem;
+            }
+            &:hover {
+                color: $accent-color-dark;
+                svg {
+                    fill: $accent-color-dark;
+                }
+            }
+            &:active {
+                background-color: $accent-color-light;
+                color: $darkgrey;
+                svg {
+                    fill: $darkgrey;
+                }
+            }
+        }
     }
 }
 
@@ -68,6 +99,16 @@
                 p {
                     font-size: 1.2rem;
                 }
+            }
+            .email-text {
+                position: absolute;
+                left: 4rem;
+                bottom: 4rem;
+            }
+            .email-link {
+                position: absolute;
+                left: 3.5rem;
+                bottom: 1.6rem;
             }
         }
     }

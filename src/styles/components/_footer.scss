@@ -1,0 +1,32 @@
+@use "../utilities/vars" as *;
+@use "../utilities/mixins" as *;
+
+.github-link {
+    position: absolute;
+    z-index: 99;
+    left: 1rem;
+    bottom: 1rem;
+    svg {
+        fill: $blob-tile-color;
+        width: 3rem;
+        height: 3rem;
+        &:hover {
+            fill: $accent-color-light;
+        }
+    }
+}
+
+.linkedin-link {
+    position: absolute;
+    z-index: 99;
+    left: 1rem;
+    bottom: 5rem;
+    svg {
+        fill: $blob-tile-color;
+        width: 3rem;
+        height: 3rem;
+        &:hover {
+            fill: $accent-color-light;
+        }
+    }
+}

@@ -3,6 +3,7 @@ import Nav from './Nav'
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import anime from 'animejs/lib/anime.es.js';
+import Footer from '../components/Footer'
 
 function Home() {
 
@@ -30,26 +31,30 @@ function Home() {
   }, []);
 
   return (
-    <article className='home-wrapper'>
-      <svg className='blob-tile-home' width="700" height="700" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <motion.path 
-          fillRule="evenodd" 
-          clipRule="evenodd" 
-          d={blobTilePath1} 
-          animate={{ d: blobTilePath2 }}
-          transition={{
-            duration: 8, 
-            repeat: Infinity, 
-            repeatType: "mirror", 
-            ease: "easeInOut",
-          }}/>
-      </svg>
-      <div className='page-content-home'>
-        <h1>Kaleb Link</h1>
-        <h2 ref={textRef} className="ml16">Front End Web Developer</h2>
-        <nav className='nav-home'><Nav currentPage="home" /></nav>
-      </div>
-    </article>
+    <>
+      <a href="#site-content" class="screen-reader-text">skip to content</a>
+      <article id='site-content' className='home-wrapper'>
+        <svg className='blob-tile-home' width="700" height="700" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <motion.path 
+            fillRule="evenodd" 
+            clipRule="evenodd" 
+            d={blobTilePath1} 
+            animate={{ d: blobTilePath2 }}
+            transition={{
+              duration: 8, 
+              repeat: Infinity, 
+              repeatType: "mirror", 
+              ease: "easeInOut",
+            }}/>
+        </svg>
+        <div className='page-content-home'>
+          <h1>Kaleb Link</h1>
+          <h2 ref={textRef} className="ml16">Front End Web Developer</h2>
+          <nav className='nav-home'><Nav currentPage="home" /></nav>
+        </div>
+      </article>
+      <Footer />
+    </>
   )
 }
 

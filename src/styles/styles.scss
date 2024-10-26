@@ -1,6 +1,7 @@
 @use "base/reset";
 
 @use "base/viteBoiler";
+@use "base/screen-reader";
 @use "components/main";
 @use "components/home";
 @use "components/works";
@@ -9,3 +10,4 @@
 @use "components/about";
 @use "components/loading";
 @use "components/cursor";
+@use "components/footer";

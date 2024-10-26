@@ -15,6 +15,7 @@ function WorkDetail() {
 
     return (
         <>
+        <a href="#site-main-content" class="screen-reader-text">skip to content</a>
             {from ?
                 <section className='work-detail-wrapper' id={`post-${from.id}`}>
                     <div>
@@ -32,7 +33,7 @@ function WorkDetail() {
                                 }} />
                         </svg>
                     </div>
-                    <div className='page-content-work-detail'>
+                    <div id='site-main-content' className='page-content-work-detail'>
                         <nav className='nav-work-detail'><Nav currentPage="details" /></nav>
                         <h1 className='detail-work-title'>{from.title.rendered}</h1>
                         <button className='work-external-link'><a target='_blank' href={`https://kaleblink.com/${from.slug}`}>Check It Out</a></button>
