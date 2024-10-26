@@ -30,17 +30,3 @@
         }
     }
 }
-
-.email-link {
-    position: absolute;
-    z-index: 99;
-    left: 5.1rem;
-    bottom: 1.4rem;
-    fill: $blob-tile-color;
-    width: 3rem;
-    height: 3rem;
-    &:hover {
-        fill: $accent-color-light;
-    }
-
-}
