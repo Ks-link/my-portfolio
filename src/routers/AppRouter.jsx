@@ -9,7 +9,7 @@ import Cursor from '../utilities/Cursor'
 function AppRouter() {
     return (
         <BrowserRouter>
-                <Cursor />
+            <Cursor />
             <main id="main">
                 <Routes>
                     <Route path='/' element={<Home />} />
