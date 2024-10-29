@@ -36,9 +36,10 @@ function Works() {
 
   return (
     <>
+    <a href="#site-content" class="screen-reader-text">skip to content</a>
       {isLoaded ?
         <section className='works-wrapper' id={`post-${restDataPage.id}`}>
-          <div className='blob-tile-works'>
+          <div id='site-content' className='blob-tile-works'>
             <svg className='blob-tile-works' width="653" height="613" viewBox="0 0 653 613" fill="none" xmlns="http://www.w3.org/2000/svg">
               <motion.path
                 fillRule="evenodd"
