@@ -36,7 +36,7 @@ function Works() {
 
   return (
     <>
-    <a href="#site-content" class="screen-reader-text">skip to content</a>
+      <a href="#site-content" class="screen-reader-text">skip to content</a>
       {isLoaded ?
         <section className='works-wrapper' id={`post-${restDataPage.id}`}>
           <div id='site-content' className='blob-tile-works'>
@@ -44,35 +44,35 @@ function Works() {
               <motion.path
                 fillRule="evenodd"
                 clipRule="evenodd"
-                d={blobTilePath1} 
+                d={blobTilePath1}
                 animate={{ d: blobTilePath2 }}
                 transition={{
-                  duration: 8, 
-                  repeat: Infinity, 
-                  repeatType: "mirror", 
+                  duration: 8,
+                  repeat: Infinity,
+                  repeatType: "mirror",
                   ease: "easeInOut",
-                }}/>
+                }} />
             </svg>
           </div>
           <div className='page-content-works'>
             <h1>{restDataPage.title.rendered}</h1>
             <nav className='nav-works'><Nav currentPage="works" /></nav>
-            <section className='work-links-wrapper'>
+            <ul className='work-links-wrapper'>
               {restDataPosts.map(post =>
-                <article key={post.id} id={`post-${post.id}`}>
+                <li key={post.id} id={`post-${post.id}`}>
                   <NavLink className='work-detail-link' to='/details' state={{ from: post }} end>
                     <h2>{post.title.rendered}
-                      <svg className='link-arrow' width="25" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      {/* <svg className='link-arrow' width="25" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M24.6575 15.706C25.0753 15.3862 25.4136 14.9761 25.6463 14.507C25.879 14.038 26 13.5225 26 13C26 12.4775 25.879 11.962 25.6463 11.493C25.4136 11.0239 25.0753 10.6138 24.6575 10.294C19.2464 6.15401 13.2042 2.89084 6.75704 0.62664L5.57824 0.212529C3.32534 -0.57821 0.944274 0.928299 0.639195 3.22912C-0.213065 9.71578 -0.213065 16.2842 0.639195 22.7709C0.94608 25.0717 3.32534 26.5782 5.57824 25.7875L6.75704 25.3734C13.2042 23.1092 19.2464 19.846 24.6575 15.706Z" />
-                      </svg>
+                      </svg> */}
                     </h2>
-                    {post.featured_media !== 0 && post._embedded &&
+                    {/* {post.featured_media !== 0 && post._embedded &&
                       <FeaturedImage featuredImageObject={post._embedded['wp:featuredmedia'][0]} />
-                    }
+                    } */}
                   </NavLink>
-                </article>
+                </li>
               )}
-            </section> {/* end works wrapper */}
+            </ul> {/* end works wrapper */}
           </div>
         </section>
         :
