@@ -21,58 +21,12 @@
             max-width: 80%;
             margin: 6rem auto;
 
-            article {
-                position: relative;
-                margin: 2rem 0;
-                .work-detail-link {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: end;
-
-                    &:hover {
-                        h2 {
-                            padding: 0 1rem 1.5rem 1rem;
-                            border-bottom: $accent-color-light 0.4rem solid;
-                            color: $accent-color-light;
-                            svg {
-                                fill: $accent-color-light;
-                            }
-                        }
-                        figure {
-                            padding-bottom: 0.5rem;
-                            border-bottom: $accent-color-light 0.4rem solid;
-                        }
-                    }
-                    
-                    h2 {
-                        font-weight: 700;
-                        font-size: 1.5rem;
-                        text-align: center;
-                        padding: 1rem;
-                        color: $tile-color-light;
-                        width: 9rem;
-                        
-                        .link-arrow {
-                            fill: $tile-color-light;
-                            padding: 0.6rem 0 0 0.6rem;
-                        }
-                    }
-                }
+            .work-detail-link {
                 figure {
-                    img {
-                        height: 8rem;
-                        width: 100%;
-                        object-fit: cover;
-                        border-radius: 1rem;
-                    }
-                }
-                &:nth-child(odd) {
-                    a {
-                        flex-direction: row-reverse;
-                        h2 {
-                            text-align: left;
-                        }
-                    }
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    top: 5rem;
                 }
             }
         }
@@ -86,7 +40,7 @@
             .work-links-wrapper {
                 width: 75%;
                 max-width: 65rem;
-                article {
+                li {
                     figure {
                         img {
                             height: 14rem;
@@ -101,6 +55,10 @@
                         svg {
                             fill: $blob-tile-color;
                         }
+                    }
+                    figure {
+                        display: block;
+                        object-fit: cover;
                     }
                 }
             }
