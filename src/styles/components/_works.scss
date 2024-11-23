@@ -22,11 +22,11 @@
             margin: 6rem auto;
 
             .work-detail-link {
+                h2 {
+                    color: $tile-color-light;
+                }
                 figure {
                     display: none;
-                    position: absolute;
-                    right: 0;
-                    top: 5rem;
                 }
             }
         }
@@ -43,7 +43,7 @@
                 li {
                     figure {
                         img {
-                            height: 14rem;
+                            // height: 14rem;
                         }
                     }
                 }
@@ -51,17 +51,32 @@
             .work-detail-link {
                 &:hover {
                     h2 {
-                        color: $blob-tile-color;
+                        text-decoration: underline;
                         svg {
                             fill: $blob-tile-color;
                         }
                     }
                     figure {
                         display: block;
-                        object-fit: cover;
+                        position: absolute;
+                        right: 4rem;
+                        bottom: 10rem;
+                        max-width: 30rem;
+                        animation: blobImg 0.5s ease-in-out;
+                        clip-path: path("M50.5,-16.5C54.3,-4.9,38.4,13,20,26C1.6,39,-19.2,47.1,-37.9,37.1C-56.5,27.1,-72.9,-1,-66.2,-16.6C-59.6,-32.3,-29.8,-35.6,-3.2,-34.6C23.4,-33.6,46.8,-28.2,50.5,-16.5Z");
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes blobImg {
+    0% {
+        transform: translateX(20rem);
+    }
+    
+    100% {
+        transform: translateX(0);
     }
 }
