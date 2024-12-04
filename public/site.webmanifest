@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Kaleb's Link",
+  "short_name": "Kaleb Link",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ff934f",
-  "background_color": "#ff934f",
+  "theme_color": "#EC4E20",
+  "background_color": "#ffffff",
   "display": "standalone"
 }
