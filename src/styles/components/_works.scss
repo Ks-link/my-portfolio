@@ -22,11 +22,11 @@
             margin: 6rem auto;
 
             .work-detail-link {
+                h2 {
+                    color: $tile-color-light;
+                }
                 figure {
                     display: none;
-                    position: absolute;
-                    right: 0;
-                    top: 5rem;
                 }
             }
         }
@@ -43,7 +43,7 @@
                 li {
                     figure {
                         img {
-                            height: 14rem;
+                            // height: 14rem;
                         }
                     }
                 }
@@ -51,17 +51,32 @@
             .work-detail-link {
                 &:hover {
                     h2 {
-                        color: $blob-tile-color;
+                        text-decoration: underline;
                         svg {
                             fill: $blob-tile-color;
                         }
                     }
                     figure {
                         display: block;
-                        object-fit: cover;
+                        position: absolute;
+                        right: 4rem;
+                        bottom: -10rem;
+                        max-width: 30rem;
+                        animation: blobImg 0.5s ease-in-out;
+                        clip-path: path("M10,100 C40,10,150,10,200,100 C240,200,100,300,10,200 Z");
                     }
                 }
             }
         }
+    }
+}
+
+@keyframes blobImg {
+    0% {
+        transform: translateY(20rem);
+    }
+    
+    100% {
+        transform: translateY(0);
     }
 }
