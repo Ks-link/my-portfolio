@@ -36,7 +36,13 @@ function WorkDetail() {
                     <div id='site-main-content' className='page-content-work-detail'>
                         <nav className='nav-work-detail'><Nav currentPage="details" /></nav>
                         <h1 className='detail-work-title'>{from.title.rendered}</h1>
-                        <button className='work-external-link'><a target='_blank' href={`https://kaleblink.com/${from.slug}`}>Check It Out</a></button>
+                        
+                        {/* This covers the edge cases that have external links */}
+                        {from.slug == 'anmarc' ? 
+                            <button className='work-external-link'><a target='_blank' href={`https://www.anmarcenterprises.ca/`}>Check It Out</a></button>
+                            : 
+                            <button className='work-external-link'><a target='_blank' href={`https://kaleblink.com/${from.slug}`}>Check It Out</a></button>
+                        }
 
                         {/* display work summary on button click */}
                         <nav className='detail-nav'>
